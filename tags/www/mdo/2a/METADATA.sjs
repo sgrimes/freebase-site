@@ -1,10 +1,41 @@
 var METADATA = {
-  "mounts": {
-    "site": "//19.site.www.branches.svn.freebase-site.googlecode.dev"
+  "app_tag": "2a", 
+  "app_key": "mdo", 
+  "extensions": {
+    "gif": {
+      "media_type": "image/gif", 
+      "handler": "tagged_binary"
+    }, 
+    "mf.css": {
+      "media_type": "text/css", 
+      "handler": "tagged_static"
+    }, 
+    "jpg": {
+      "media_type": "image/jpg", 
+      "handler": "tagged_binary"
+    }, 
+    "omf.js": {
+      "media_type": "text/javascript", 
+      "handler": "js_manifest"
+    }, 
+    "mf.js": {
+      "media_type": "text/javascript", 
+      "handler": "tagged_static"
+    }, 
+    "omf.css": {
+      "media_type": "text/css", 
+      "handler": "css_manifest"
+    }, 
+    "png": {
+      "media_type": "image/png", 
+      "handler": "tagged_binary"
+    }
   }, 
-  "app_tag": null, 
-  "app_version": 2, 
-  "app_key": "mdo"
+  "ttl": -1, 
+  "mounts": {
+    "site": "//19a.site.www.tags.svn.freebase-site.googlecode.dev"
+  }, 
+  "app_version": "2o"
 };
 
-acre.require(METADATA.mounts.site + "/lib/helper/helpers.sjs").extend_metadata(METADATA, "site");
+acre.require(METADATA.mounts.site + "/lib/helper/helpers.sjs").extend_metadata(METADATA, "site")
